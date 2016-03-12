@@ -4,9 +4,9 @@ organization := "com.github.mdr"
 
 version := "0.0.6"
 
-scalaVersion := "2.10.1"
+scalaVersion := "2.10.6"
 
-crossScalaVersions := Seq("2.9.1", "2.9.2", "2.10.1")
+crossScalaVersions := Seq("2.9.1", "2.9.2", "2.10.6")
 
 scalacOptions ++= Seq("-deprecation")
 
@@ -18,18 +18,6 @@ libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.10.1" % "test"
 
 // Screen-sized dependency graph:
 // libraryDependencies += "org.vert-x" % "vertx-core" % "1.3.1.final"
-
-EclipseKeys.withSource := true
-
-EclipseKeys.eclipseOutput := Some("bin")
-
-net.virtualvoid.sbt.graph.Plugin.graphSettings
-
-scalariformSettings
-
-ScalariformKeys.preferences <<= baseDirectory.apply { dir => 
-    scalariform.formatter.preferences.PreferencesImporterExporter.loadPreferences((dir / "formatterPreferences.properties").getPath)
-}
 
 publishMavenStyle := true
 
