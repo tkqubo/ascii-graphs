@@ -133,9 +133,9 @@ class Layouter(vertexRenderingStrategy: VertexRenderingStrategy[_], vertical: Bo
       if (vertical)
         (degree + selfEdges) * 2 + 1 + 2
       else {
-        // We could draw horizontal diagrams more compactly, but the PortNudger requires 
+        // We could draw horizontal diagrams more compactly, but the PortNudger requires
         // space at the moment.
-        // degree + selfEdges + 2  
+        // degree + selfEdges + 2
         (degree + selfEdges) * 2 + 1 + 2
       }
     val requiredInputWidth = requiredWidth(inDegree)

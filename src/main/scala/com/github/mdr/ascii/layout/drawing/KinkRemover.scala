@@ -87,16 +87,16 @@ object KinkRemover {
 
       //                    .
       //                    .
-      //                    │ 
-      //           segment1 │ 
+      //                    │
+      //           segment1 │
       //                    │  segment2
-      //              start ╰────────────╮ middle 
+      //              start ╰────────────╮ middle
       //                    .            │
       //                    .            │ segment3
-      //                    .            │ 
+      //                    .            │
       //  alternativeMiddle .............╰─end───────────...
       //                                      segment4
-      //                       
+      //
       case (segment1Opt, segment2 @ EdgeSegment(start, Left | Right, middle), segment3 @ EdgeSegment(_, Down, end), segment4Opt) ⇒
         val alternativeMiddle = Point(end.row, start.column)
         segment1Opt.foreach(edgeTracker.removeVerticalSegment)

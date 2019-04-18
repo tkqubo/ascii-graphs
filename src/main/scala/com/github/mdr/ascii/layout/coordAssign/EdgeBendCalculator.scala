@@ -28,14 +28,14 @@ class EdgeBendCalculator(edgeInfos: List[EdgeInfo], edgeZoneTopRow: Int, selfEdg
   private def orderEdgeBends(edgeInfos: List[EdgeInfo]): Map[EdgeInfo, Int] = {
     // We sort so as to avoid unnecessary crossings of edges in or out of a common vertex:
     //
-    //  ╭─────╮                  ╭─────╮           
-    //  │  a  │                  │  a  │           
-    //  ╰─┬─┬─╯                  ╰─┬─┬─╯           
-    //    │ │                      │ │             
-    //    ╰─┼─╮             vs     │ ╰──────────╮  
-    //      ╰─┼────────╮           ╰───╮        │  
-    //        │        │               │        │  
-    //        v        v               v        v  
+    //  ╭─────╮                  ╭─────╮
+    //  │  a  │                  │  a  │
+    //  ╰─┬─┬─╯                  ╰─┬─┬─╯
+    //    │ │                      │ │
+    //    ╰─┼─╮             vs     │ ╰──────────╮
+    //      ╰─┼────────╮           ╰───╮        │
+    //        │        │               │        │
+    //        v        v               v        v
     //  ╭──────────╮ ╭───╮       ╭──────────╮ ╭───╮
     //  │aaaaaaaaaa│ │ b │       │aaaaaaaaaa│ │ b │
     //  ╰──────────╯ ╰───╯       ╰──────────╯ ╰───╯
@@ -43,14 +43,14 @@ class EdgeBendCalculator(edgeInfos: List[EdgeInfo], edgeZoneTopRow: Int, selfEdg
     //  ╭──────────╮ ╭───╮       ╭──────────╮ ╭───╮
     //  │aaaaaaaaaa│ │ b │       │aaaaaaaaaa│ │ b │
     //  ╰─────┬────╯ ╰─┬─╯       ╰─────┬────╯ ╰─┬─╯
-    //        │        │               │        │  
-    //      ╭─┼────────╯    vs     ╭───╯        │  
-    //    ╭─┼─╯                    │ ╭──────────╯  
-    //    │ │                      │ │             
-    //    v v                      v v             
-    //  ╭─────╮                  ╭─────╮           
-    //  │  a  │                  │  a  │           
-    //  ╰─────╯                  ╰─────╯           
+    //        │        │               │        │
+    //      ╭─┼────────╯    vs     ╭───╯        │
+    //    ╭─┼─╯                    │ ╭──────────╯
+    //    │ │                      │ │
+    //    v v                      v v
+    //  ╭─────╮                  ╭─────╮
+    //  │  a  │                  │  a  │
+    //  ╰─────╯                  ╰─────╯
 
     /**
      * Magic ranking to ensure that the edge bends ordered this way minimise crossings.

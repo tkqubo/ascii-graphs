@@ -1,10 +1,10 @@
-addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.2.0")
+addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "5.2.4")
 
-addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.2")
+addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.9.2")
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-pgp" % "0.8")
+//addSbtPlugin("com.typesafe.sbt" % "sbt-pgp" % "0.8")
 
 resolvers += Resolver.typesafeRepo("releases")
 
-addSbtPlugin("org.scalariform" % "sbt-scalariform" % "1.6.0")
+addSbtPlugin("org.scalariform" % "sbt-scalariform" % "1.8.2")
 
