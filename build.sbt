@@ -4,7 +4,7 @@ organization := "com.github.mdr"
 
 version := "0.0.6"
 
-scalaVersion := "2.11.11"
+scalaVersion := "2.12.8"
 
 crossScalaVersions := Seq("2.11.11", "2.12.8")
 
